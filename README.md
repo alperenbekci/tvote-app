@@ -32,14 +32,14 @@ Follow these simple steps to get your development env running:
 ### Clone the repository
 
 ```bash
-git clone https://github.com/alperenbekci/tvote.git
+git clone https://github.com/alperenbekci/tvote-app.git
 
 ```
 
 ### Change directory
 
 ```bash
-cd tvote
+cd tvote-app
 ```
 
 ### Install dependencies
