@@ -8,13 +8,15 @@ import Connected from "./Components/Connected";
 import "./App.css";
 
 function formatTime(seconds) {
-  const days = Math.floor(seconds / (3600 * 24));
-  seconds -= days * 3600 * 24;
-  const hrs = Math.floor(seconds / 3600);
-  seconds -= hrs * 3600;
-  const mins = Math.floor(seconds / 60);
-  seconds -= mins * 60;
-  return `${days} day ${hrs} hour ${mins} minutes`;
+  const days = Math.floor(Number(seconds) / (24 * 60 * 60));
+  const hoursLeft = Math.floor(
+    (Number(seconds) - days * 24 * 60 * 60) / (60 * 60)
+  );
+  const minutesLeft = Math.floor(
+    (Number(seconds) - days * 24 * 60 * 60 - hoursLeft * 60 * 60) / 60
+  );
+
+  return `${days} gün ${hoursLeft} saat ${minutesLeft} dakika`;
 }
 
 function App() {
@@ -141,9 +143,8 @@ function App() {
       contractAbi,
       signer
     );
-    const time = await contractInstance.getRemainingTime();
-    const formattedTime = formatTime(parseInt(time, 16));
-    setRemainingTime(formattedTime);
+    const timeInSeconds = await contractInstance.getRemainingTime();
+    setRemainingTime(formatTime(timeInSeconds));
   }
 
   async function connectToMetamask() {
