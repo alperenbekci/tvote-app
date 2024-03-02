@@ -1,5 +1,8 @@
 # TVote
 
+![trilemma](https://github.com/alperenbekci/tvote-app/assets/104009709/bb727b90-b3b8-4e23-9596-3d214c9da196)
+
+
 ## About the Project
 
 TVote is a cutting-edge, decentralized voting platform designed and developed by the Trilemma team. Utilizing the Ethereum blockchain, TVote empowers users to cast their votes in a manner that is not only transparent but also secured through the use of smart contracts. By harnessing the inherent security and transparency features of blockchain technology, TVote offers a revolutionary approach to conducting voting processes securely.
@@ -29,14 +32,14 @@ Follow these simple steps to get your development env running:
 ### Clone the repository
 
 ```bash
-git clone https://github.com/alperenbekci/tvote.git
+git clone https://github.com/alperenbekci/tvote-app.git
 
 ```
 
 ### Change directory
 
 ```bash
-cd tvote
+cd tvote-app
 ```
 
 ### Install dependencies
