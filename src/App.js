@@ -16,7 +16,7 @@ function formatTime(seconds) {
     (Number(seconds) - days * 24 * 60 * 60 - hoursLeft * 60 * 60) / 60
   );
 
-  return `${days} gün ${hoursLeft} saat ${minutesLeft} dakika`;
+  return `${days} days ${hoursLeft} hours ${minutesLeft} minutes left`;
 }
 
 function App() {
